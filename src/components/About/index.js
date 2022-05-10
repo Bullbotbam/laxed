@@ -1,11 +1,10 @@
 import React from 'react';
-import coverImage from '../../assets/large/commercial/1.jpg';
+import coverImage from '../../assets/cover/lacrosse.png';
 
 function About() {
 	return (
 		<section className="my-5">
-			<h1 id="about">What is Lax Ed?</h1>
-			,
+			<h1 id="about">LaxEd Developmental Lacrosse</h1>
 			<img
 				src={coverImage}
 				className="my-2"
