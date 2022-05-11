@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
+import Teams from './pages/Teams';
 import Countdown from './components/Countdown';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 				<About></About>
 				<Countdown />
 			</main>
+			<Teams></Teams>
 		</div>
 	);
 }
