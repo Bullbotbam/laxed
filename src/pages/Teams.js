@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemText from '@mui/material/ListItemText';
+
 import Avatar from '@mui/material/Avatar';
 
 import { styled } from '@mui/material/styles';
@@ -36,32 +38,39 @@ const Demo = styled('div')(({ theme }) => ({
 export default function Teams() {
 	const teams = [
 		{
-			name: 'Team A',
+			teamName: 'Team A',
 			players: ['Player 1', 'Player 2', 'Player 3'],
 			logo: teamALogo,
 		},
 		{
-			name: 'Team B',
+			teamName: 'Team B',
 			players: ['Player 1', 'Player 2', 'Player 3'],
 			logo: teamBLogo,
 		},
 		{
-			name: 'Team C',
+			teamName: 'Team C',
 			players: ['Player 1', 'Player 2', 'Player 3'],
 			logo: teamCLogo,
 		},
 		{
-			name: 'Team D',
+			teamName: 'Team D',
 			players: ['Player 1', 'Player 2', 'Player 3'],
 			logo: teamDLogo,
 		},
 		{
-			name: 'Team E',
-			players: ['Player 1', 'Player 2', 'Player 3'],
+			teamName: 'Team E',
+			players: {
+				p1: 'This Guy',
+				p2: 'That Guy',
+				p3: 'The Other Guy',
+				p4: 'Another Guy',
+				p5: 'My Guy',
+				p6: 'Them Guys',
+			},
 			logo: teamELogo,
 		},
 		{
-			name: 'Team F',
+			teamName: 'Team F',
 			players: ['Player 1', 'Player 2', 'Player 3'],
 			logo: teamFLogo,
 		},
@@ -79,7 +88,7 @@ export default function Teams() {
 
 					<CardContent>
 						<Typography gutterBottom variant="h5" component="div">
-							{team.name}
+							{team.teamName}
 						</Typography>
 						{/* <Typography variant="body2" color="text.secondary">
 							Current Roster: {team.players}
@@ -91,15 +100,14 @@ export default function Teams() {
 									{generate(
 										<ListItem>
 											<ListItemAvatar>
-												<Avatar
-													alt={team.players}
-													src="../assets/avatar/avatar1.png"
-												></Avatar>
+												<Avatar alt={teams.players} src={avatar1}></Avatar>
 											</ListItemAvatar>
+											{/* {teams.players.map((player) => ( */}
 											<ListItemText
-												primary="Single-line item"
-												secondary={secondary ? 'Secondary text' : null}
+												primary={teams.players}
+												// secondary={secondary ? 'Secondary text' : null}
 											/>
+											{/* // ))} */}
 										</ListItem>
 									)}
 								</List>
